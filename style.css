@@ -361,6 +361,13 @@ a { text-decoration: none; color: inherit; }
     var(--gold) 24px, var(--gold) 48px
   );
 }
+.section-stripe-top{
+  margin-bottom: 3rem;
+}
+.section-stripe-bottom{
+  margin-top: 3rem;
+}
+
 .section-stripe-top.red,
 .section-stripe-bottom.red {
   background: repeating-linear-gradient(
@@ -412,7 +419,7 @@ a { text-decoration: none; color: inherit; }
 /* ══════════════════════ SOBRE ══════════════════════ */
 .sobre {
   background: var(--cream2);
-  padding: 6rem 0;
+  padding: 0rem 0;
 }
 
 .sobre-grid {
@@ -843,7 +850,7 @@ a { text-decoration: none; color: inherit; }
 /* ══════════════════════ AMBIENTE ══════════════════════ */
 .ambiente {
   background: var(--cream2);
-  padding: 6rem 0;
+  padding: 0rem 0;
 }
 
 .ambiente-grid {
