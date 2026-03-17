@@ -159,22 +159,17 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--dark);
+  background: var(--dark) url('Banner da primeira dobra/Prancheta 8.png') center/cover no-repeat;
+}
+@media (min-width: 768px) {
+  .hero { background-image: url('Banner da primeira dobra/Prancheta 7.png'); }
+}
+@media (min-width: 1024px) {
+  .hero { background-image: url('Banner da primeira dobra/Prancheta 17.png'); }
 }
 
-/* Circus stripes background */
-.hero-stripes {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--red) 0px,
-    var(--red) 48px,
-    var(--white) 48px,
-    var(--white) 96px
-  );
-  opacity: 0.12;
-}
+/* Stripes overlay — oculto pois o banner já tem design próprio */
+.hero-stripes { display: none; }
 
 .hero-content {
   position: relative;
@@ -853,63 +848,89 @@ a { text-decoration: none; color: inherit; }
   padding: 0rem 0;
 }
 
-.ambiente-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+/* ══════════════════════ CARROSSEL AMBIENTE ══════════════════════ */
+.ambiente-carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3rem;
 }
 
-.ambiente-slot {
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius);
+.carousel-track-wrap {
   overflow: hidden;
+  border-radius: var(--radius);
   border: 3px solid var(--gold);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-.ambiente-slot:hover {
   box-shadow: var(--shadow-lg);
-  border-color: var(--red);
-  transform: translateY(-4px);
-}
-.ambiente-slot--wide {
-  grid-column: span 3;
-  aspect-ratio: 16 / 6;
 }
 
-.ambiente-slot img {
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  aspect-ratio: 4 / 3;
+  flex-shrink: 0;
+}
+
+.carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.ambiente-placeholder {
-  width: 100%;
-  height: 100%;
-  min-height: 180px;
-  background: linear-gradient(135deg, var(--cream), #eedd99 120%);
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  background: rgba(45,10,10,0.85);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  border: 2px dashed rgba(196,149,58,0.5);
-  padding: 1.5rem;
-  text-align: center;
+  transition: var(--transition);
+  line-height: 1;
+  padding: 0;
 }
-.foto-icon { font-size: 2.5rem; opacity: 0.45; }
-.ambiente-placeholder p {
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--text);
-  opacity: 0.7;
-  font-size: 0.95rem;
+.carousel-btn:hover { background: var(--gold); color: var(--dark); }
+.carousel-btn.prev { left: 0; }
+.carousel-btn.next { right: 0; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
 }
-.ambiente-placeholder small {
-  color: var(--gold);
-  font-size: 0.75rem;
-  opacity: 0.8;
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.3;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+.carousel-dot.active {
+  opacity: 1;
+  transform: scale(1.35);
+}
+
+@media (max-width: 768px) {
+  .ambiente-carousel { padding: 0 2.5rem; }
+  .carousel-btn { font-size: 1.5rem; width: 38px; height: 38px; }
 }
 
 /* ══════════════════════ HORÁRIOS ══════════════════════ */
@@ -1232,8 +1253,6 @@ a { text-decoration: none; color: inherit; }
   .sobre-grid { grid-template-columns: 1fr; }
   .sobre-cards { flex-direction: row; flex-wrap: wrap; }
   .info-ticket { flex: 1; min-width: 240px; }
-  .ambiente-grid { grid-template-columns: repeat(2, 1fr); }
-  .ambiente-slot--wide { grid-column: span 2; }
 }
 
 @media (max-width: 768px) {
@@ -1291,8 +1310,6 @@ a { text-decoration: none; color: inherit; }
   .nav-cta { display: none; }
   .menu-grid { grid-template-columns: 1fr; }
   .sobre-cards { flex-direction: column; }
-  .ambiente-grid { grid-template-columns: 1fr; }
-  .ambiente-slot--wide { grid-column: span 1; aspect-ratio: 4 / 3; }
 }
 
 /* ══════════════════════ ANIMATIONS ON SCROLL ══════════════════════ */

@@ -78,7 +78,7 @@ tabBtns.forEach(btn => {
 
 /* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll(
-  '.menu-item, .exp-card, .contato-card, .badge-item, .enc-card, .sobre-text, .sobre-cards, .info-ticket, .ambiente-slot'
+  '.menu-item, .exp-card, .contato-card, .badge-item, .enc-card, .sobre-text, .info-ticket, .ambiente-carousel'
 );
 
 revealEls.forEach(el => el.classList.add('reveal'));
@@ -127,6 +127,52 @@ window.addEventListener('mousemove', e => {
     star.style.transform = `translate(${dx * depth}px, ${dy * depth}px)`;
   });
 }, { passive: true });
+
+/* ── AMBIENTE CAROUSEL ── */
+(function () {
+  const track    = document.getElementById('ambienteTrack');
+  const prevBtn  = document.getElementById('ambientePrev');
+  const nextBtn  = document.getElementById('ambienteNext');
+  const dotsWrap = document.getElementById('ambienteDots');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.carousel-slide');
+  const total  = slides.length;
+  let current  = 0;
+  let autoTimer;
+
+  // Gera os dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Slide ${i + 1}`);
+    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+    dotsWrap.appendChild(dot);
+  });
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+  nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+  function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 4500); }
+  function resetAuto()  { clearInterval(autoTimer); startAuto(); }
+  startAuto();
+
+  // Suporte a swipe mobile
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
+  });
+})();
 
 /* ── INIT ── */
 updateActiveNav();
