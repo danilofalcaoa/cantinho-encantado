@@ -627,7 +627,9 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-circus);
   font-size: 1.5rem;
   color: var(--red-dk);
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -1317,22 +1319,8 @@ a { text-decoration: none; color: inherit; }
 
   .footer-inner { flex-direction: column; text-align: center; }
 
-  .menu-tabs {
-    gap: 0.35rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .menu-tabs::-webkit-scrollbar { display: none; }
-  .tab-btn {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.85rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+  .menu-tabs { gap: 0.35rem; }
+  .tab-btn { font-size: 0.75rem; padding: 0.5rem 0.85rem; }
 
   .encomendas-grid { justify-content: stretch; }
   .enc-card { min-width: 120px; }
