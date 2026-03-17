@@ -433,7 +433,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ══════════════════════ PREMIAÇÃO ══════════════════════ */
 .premiacao {
-  background: var(--navy);
+  background: var(--dark);
   padding: 2.5rem 0;
   overflow: hidden;
 }
