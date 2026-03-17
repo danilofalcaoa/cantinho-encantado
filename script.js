@@ -193,19 +193,34 @@ window.addEventListener('mousemove', e => {
   function startAuto() { autoTimer = setInterval(next, 4500); }
   function resetAuto()  { clearInterval(autoTimer); startAuto(); }
 
-  /* Inicializa — aguarda layout se necessário */
+  /* Inicializa — só executa quando o container tiver dimensão real */
   function init() {
-    if (wrap.offsetWidth === 0) { requestAnimationFrame(init); return; }
+    if (wrap.offsetWidth === 0) return;
     applyWidths();
     buildDots();
     goTo(Math.min(current, maxIdx()));
   }
 
-  /* Duplo rAF garante que o browser terminou o layout antes de medir */
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    init();
-    startAuto();
-  }));
+  /* ResizeObserver: dispara quando o elemento ganha tamanho real no layout.
+     Muito mais confiável no iOS Safari do que requestAnimationFrame. */
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(() => {
+      if (wrap.offsetWidth > 0) {
+        ro.disconnect();
+        init();
+        startAuto();
+      }
+    });
+    ro.observe(wrap);
+  } else {
+    /* Fallback para browsers sem ResizeObserver */
+    function tryInit() {
+      if (wrap.offsetWidth > 0) { init(); startAuto(); }
+      else setTimeout(tryInit, 50);
+    }
+    if (document.readyState === 'complete') tryInit();
+    else window.addEventListener('load', tryInit);
+  }
 
   let resizeTimer;
   window.addEventListener('resize', () => {
