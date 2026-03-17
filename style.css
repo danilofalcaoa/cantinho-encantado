@@ -1,23 +1,23 @@
 /* ═══════════════════════════════════════════════════════════
    CANTINHO ENCANTADO — CSS
    Tema: Circo Mágico
-   Paleta: Vermelho #CC1016 · Ouro #C4953A · Creme #F5EDD8
+   Paleta oficial: Vermelho #CC0000 · Ouro #CC9933 · Azul #003399
 ═══════════════════════════════════════════════════════════ */
 
 /* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --red:    #CC1016;
-  --red-dk: #8B0000;
-  --gold:   #C4953A;
-  --gold-lt:#E8C876;
+  --red:    #CC0000;
+  --red-dk: #990000;
+  --gold:   #CC9933;
+  --gold-lt:#E7CD81;
   --cream:  #F5EDD8;
   --cream2: #FDF6E3;
-  --dark:   #2D0A0A;
+  --dark:   #001233;
   --white:  #ffffff;
-  --navy:   #1a2744;
-  --text:   #3a2a2a;
+  --navy:   #003399;
+  --text:   #333333;
 
   --font-display: 'Roboto', Arial, sans-serif;
   --font-circus:  'Alfa Slab One', Georgia, serif;
@@ -57,7 +57,7 @@ a { text-decoration: none; color: inherit; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(45, 10, 10, 0.97);
+  background: rgba(0, 18, 51, 0.97);
   backdrop-filter: blur(8px);
   border-bottom: 3px solid var(--gold);
   transition: var(--transition);
@@ -1013,7 +1013,7 @@ a { text-decoration: none; color: inherit; }
   position: absolute;
   top: 50%;
   transform: translateY(-60%);
-  background: rgba(45,10,10,0.85);
+  background: rgba(0, 18, 51, 0.85);
   border: 2px solid var(--gold);
   color: var(--gold);
   font-size: 2rem;
@@ -1389,7 +1389,7 @@ a { text-decoration: none; color: inherit; }
   .nav-links {
     position: fixed;
     top: 90px; left: 0; right: 0;
-    background: rgba(45,10,10,0.98);
+    background: rgba(0, 18, 51, 0.98);
     backdrop-filter: blur(8px);
     flex-direction: column;
     padding: 0 1.5rem;
