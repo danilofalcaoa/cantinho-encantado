@@ -78,7 +78,7 @@ tabBtns.forEach(btn => {
 
 /* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll(
-  '.menu-item, .exp-card, .contato-card, .badge-item, .enc-card, .sobre-text, .info-ticket, .ambiente-carousel'
+  '.menu-item, .exp-card, .contato-card, .badge-item, .enc-card, .sobre-text, .info-ticket'
 );
 
 revealEls.forEach(el => el.classList.add('reveal'));
@@ -193,15 +193,19 @@ window.addEventListener('mousemove', e => {
   function startAuto() { autoTimer = setInterval(next, 4500); }
   function resetAuto()  { clearInterval(autoTimer); startAuto(); }
 
-  /* Inicializa e reage ao resize */
+  /* Inicializa — aguarda layout se necessário */
   function init() {
+    if (wrap.offsetWidth === 0) { requestAnimationFrame(init); return; }
     applyWidths();
     buildDots();
     goTo(Math.min(current, maxIdx()));
   }
 
-  init();
-  startAuto();
+  /* Duplo rAF garante que o browser terminou o layout antes de medir */
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    init();
+    startAuto();
+  }));
 
   let resizeTimer;
   window.addEventListener('resize', () => {
