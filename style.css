@@ -14,15 +14,13 @@
   --gold-lt:#E8C876;
   --cream:  #F5EDD8;
   --cream2: #FDF6E3;
-  --dark:   #1a0a0a;
+  --dark:   #2D0A0A;
   --white:  #ffffff;
   --navy:   #1a2744;
   --text:   #3a2a2a;
 
   --font-display: 'Playfair Display', Georgia, serif;
-  --font-script:  'Dancing Script', cursive;
   --font-circus:  'Alfa Slab One', Georgia, serif;
-  --font-body:    'Lato', Arial, sans-serif;
 
   --shadow: 0 4px 24px rgba(0,0,0,0.18);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.28);
@@ -33,7 +31,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   color: var(--text);
   background: var(--cream);
   overflow-x: hidden;
@@ -59,7 +57,7 @@ a { text-decoration: none; color: inherit; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(26, 10, 10, 0.97);
+  background: rgba(45, 10, 10, 0.97);
   backdrop-filter: blur(8px);
   border-bottom: 3px solid var(--gold);
   transition: var(--transition);
@@ -97,7 +95,7 @@ a { text-decoration: none; color: inherit; }
 
 .nav-links a {
   color: var(--cream);
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.82rem;
   text-transform: uppercase;
@@ -234,7 +232,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-subtitle {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
+  font-style: italic;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   color: var(--cream);
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
@@ -242,7 +241,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-city {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -400,7 +399,8 @@ a { text-decoration: none; color: inherit; }
 .section-title.white span { color: var(--gold-lt); }
 
 .section-subtitle {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
+  font-style: italic;
   font-size: 1.3rem;
   color: var(--gold);
   margin-top: 0.5rem;
@@ -410,7 +410,7 @@ a { text-decoration: none; color: inherit; }
 /* ══════════════════════ SOBRE ══════════════════════ */
 .sobre {
   background: var(--cream2);
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .sobre-grid {
@@ -546,7 +546,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ══════════════════════ CARDÁPIO ══════════════════════ */
 .cardapio {
-  padding: 5rem 0;
+  padding: 6rem 0;
   background: var(--cream);
 }
 
@@ -566,7 +566,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--white);
   border: 2px solid var(--red);
   color: var(--red-dk);
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.85rem;
   padding: 0.6rem 1.1rem;
@@ -647,7 +647,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .item-name {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 900;
   font-size: 0.95rem;
   color: var(--red-dk);
@@ -739,7 +739,7 @@ a { text-decoration: none; color: inherit; }
   border: 2px solid var(--gold);
 }
 .sabores-box h4 {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 900;
   color: var(--red-dk);
   margin-bottom: 0.8rem;
@@ -778,7 +778,7 @@ a { text-decoration: none; color: inherit; }
 /* ══════════════════════ EXPERIÊNCIA ══════════════════════ */
 .experiencia {
   background: var(--dark);
-  padding: 5rem 0;
+  padding: 6rem 0;
   position: relative;
 }
 
@@ -836,9 +836,74 @@ a { text-decoration: none; color: inherit; }
 }
 .exp-card p strong { color: var(--gold-lt); }
 
+/* ══════════════════════ AMBIENTE ══════════════════════ */
+.ambiente {
+  background: var(--cream2);
+  padding: 6rem 0;
+}
+
+.ambiente-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ambiente-slot {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.ambiente-slot:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--red);
+  transform: translateY(-4px);
+}
+.ambiente-slot--wide {
+  grid-column: span 3;
+  aspect-ratio: 16 / 6;
+}
+
+.ambiente-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ambiente-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  background: linear-gradient(135deg, var(--cream), #eedd99 120%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px dashed rgba(196,149,58,0.5);
+  padding: 1.5rem;
+  text-align: center;
+}
+.foto-icon { font-size: 2.5rem; opacity: 0.45; }
+.ambiente-placeholder p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+.ambiente-placeholder small {
+  color: var(--gold);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
 /* ══════════════════════ HORÁRIOS ══════════════════════ */
 .horarios {
-  padding: 5rem 0;
+  padding: 6rem 0;
   background: var(--cream2);
 }
 
@@ -889,7 +954,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .signboard-body h3 {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
+  font-style: italic;
   font-size: 1.8rem;
   color: var(--red);
   margin-bottom: 1.5rem;
@@ -926,7 +992,7 @@ a { text-decoration: none; color: inherit; }
 .day-time span {
   font-size: 1rem;
   color: #7a6a5a;
-  font-family: var(--font-body);
+  font-family: var(--font-display);
 }
 
 .horario-divider {
@@ -947,7 +1013,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ══════════════════════ CONTATO ══════════════════════ */
 .contato {
-  padding: 5rem 0;
+  padding: 6rem 0;
   background: var(--cream);
 }
 
@@ -1142,6 +1208,8 @@ a { text-decoration: none; color: inherit; }
   .sobre-grid { grid-template-columns: 1fr; }
   .sobre-cards { flex-direction: row; flex-wrap: wrap; }
   .info-ticket { flex: 1; min-width: 240px; }
+  .ambiente-grid { grid-template-columns: repeat(2, 1fr); }
+  .ambiente-slot--wide { grid-column: span 2; }
 }
 
 @media (max-width: 768px) {
@@ -1150,7 +1218,7 @@ a { text-decoration: none; color: inherit; }
   .nav-links {
     position: fixed;
     top: 72px; left: 0; right: 0;
-    background: rgba(26,10,10,0.98);
+    background: rgba(45,10,10,0.98);
     backdrop-filter: blur(8px);
     flex-direction: column;
     padding: 1.5rem;
@@ -1197,6 +1265,8 @@ a { text-decoration: none; color: inherit; }
   .nav-cta { display: none; }
   .menu-grid { grid-template-columns: 1fr; }
   .sobre-cards { flex-direction: column; }
+  .ambiente-grid { grid-template-columns: 1fr; }
+  .ambiente-slot--wide { grid-column: span 1; aspect-ratio: 4 / 3; }
 }
 
 /* ══════════════════════ ANIMATIONS ON SCROLL ══════════════════════ */

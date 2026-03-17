@@ -78,7 +78,7 @@ tabBtns.forEach(btn => {
 
 /* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll(
-  '.menu-item, .exp-card, .contato-card, .badge-item, .enc-card, .sobre-text, .sobre-cards, .info-ticket'
+  '.menu-item, .exp-card, .contato-card, .badge-item, .enc-card, .sobre-text, .sobre-cards, .info-ticket, .ambiente-slot'
 );
 
 revealEls.forEach(el => el.classList.add('reveal'));
