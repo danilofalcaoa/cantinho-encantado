@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cantinho Encantado – Pizzaria e Restaurante Temático | Feira de Santana</title>
+  <meta name="description" content="Cantinho Encantado Pizzaria e Restaurante Temático em Feira de Santana. Ambiente de circo mágico, pizzas, gelatos, sobremesas, drinks e muito mais. Venha se encantar!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&family=Dancing+Script:wght@700&family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">
+        <img src="Identidade visual/LOGO C. ENCANTADO.JPG.jpeg" alt="Cantinho Encantado" />
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#horarios">Horários</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://wa.me/5575999925697" target="_blank" class="nav-cta">Reservar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <!-- Stripes background -->
+    <div class="hero-stripes"></div>
+    <!-- Marquee lights top -->
+    <div class="marquee-lights top">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero-content">
+      <!-- Stars decoration -->
+      <div class="star star-1">&#9733;</div>
+      <div class="star star-2">&#9733;</div>
+      <div class="star star-3">&#9733;</div>
+      <div class="star star-4">&#9733;</div>
+      <div class="star star-5">&#9733;</div>
+
+      <!-- Tent SVG -->
+      <div class="tent-wrap">
+        <svg class="tent-svg" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+          <!-- Flag -->
+          <line x1="150" y1="0" x2="150" y2="30" stroke="#C4953A" stroke-width="3"/>
+          <polygon points="150,2 175,12 150,22" fill="#C4953A"/>
+          <!-- Tent body -->
+          <polygon points="150,28 0,130 300,130" fill="#CC1016"/>
+          <!-- Stripes -->
+          <polygon points="150,28 120,130 150,130" fill="#fff" opacity="0.3"/>
+          <polygon points="150,28 80,130 110,130" fill="#fff" opacity="0.3"/>
+          <polygon points="150,28 180,130 210,130" fill="#fff" opacity="0.3"/>
+          <!-- Border bottom -->
+          <rect x="0" y="128" width="300" height="8" rx="4" fill="#8B0000"/>
+          <!-- Scallop border -->
+          <ellipse cx="15" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="45" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="75" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="105" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="135" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="165" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="195" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="225" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="255" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <ellipse cx="285" cy="136" rx="15" ry="10" fill="#C4953A"/>
+          <!-- Entrance -->
+          <path d="M120,130 Q150,100 180,130" fill="#4a0a0a"/>
+        </svg>
+      </div>
+
+      <div class="hero-logo-wrap">
+        <img src="Identidade visual/LOGO C. ENCANTADO.JPG.jpeg" alt="Cantinho Encantado Logo" class="hero-logo" />
+      </div>
+
+      <p class="hero-subtitle">Onde a magia do circo encontra os melhores sabores</p>
+      <p class="hero-city">Feira de Santana · Bahia</p>
+
+      <div class="hero-buttons">
+        <a href="#cardapio" class="btn-primary">Ver Cardápio</a>
+        <a href="https://wa.me/5575999925697" target="_blank" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Marquee lights bottom -->
+    <div class="marquee-lights bottom">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <a href="#sobre" class="hero-scroll">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════ SOBRE ════════════════════════════════ -->
+  <section class="sobre" id="sobre">
+    <div class="section-stripe-top"></div>
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="circus-badge">
+          <span>&#9733;</span>
+        </div>
+        <h2 class="section-title">Bem-vindo ao Cantinho <span>Encantado</span></h2>
+        <p class="section-subtitle">Um lugar onde cada detalhe é uma atração</p>
+      </div>
+
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <p>No coração de <strong>Feira de Santana</strong>, existe um lugar onde a magia do circo se transforma em experiência gastronômica única. O <strong>Cantinho Encantado</strong> é um restaurante temático que combina o charme e a alegria do circo com os melhores sabores da culinária regional e internacional.</p>
+          <p>Mais do que um restaurante, somos um destino completo: <strong>pizzaria artesanal</strong>, <strong>doceria</strong>, <strong>cafeteria</strong>, <strong>gelateria</strong> e <strong>espaço kids</strong> — tudo em um ambiente mágico, colorido e acolhedor para toda a família.</p>
+          <p>Com mais de <strong>53 mil seguidores</strong> no Instagram e um ambiente que encanta crianças e adultos, o Cantinho Encantado é o lugar perfeito para momentos especiais, celebrações e aquele encontro que merece ser inesquecível.</p>
+          <div class="sobre-badges">
+            <div class="badge-item">
+              <span class="badge-icon">🎪</span>
+              <span>Ambiente Temático</span>
+            </div>
+            <div class="badge-item">
+              <span class="badge-icon">👨‍👩‍👧‍👦</span>
+              <span>Para toda a família</span>
+            </div>
+            <div class="badge-item">
+              <span class="badge-icon">🎠</span>
+              <span>Espaço Kids</span>
+            </div>
+            <div class="badge-item">
+              <span class="badge-icon">🍕</span>
+              <span>Pizzaria Artesanal</span>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-cards">
+          <div class="info-ticket">
+            <div class="ticket-top">
+              <div class="ticket-holes"></div>
+              <h3>Formas de Pagamento</h3>
+            </div>
+            <div class="ticket-body">
+              <p>&#10003; PIX / Dinheiro</p>
+              <p>&#10003; Cartão de Crédito</p>
+              <p>&#10003; Cartão de Débito</p>
+              <div class="payment-icons">
+                <span class="pay-badge">ELO</span>
+                <span class="pay-badge">VISA</span>
+                <span class="pay-badge">MASTER</span>
+                <span class="pay-badge">PIX</span>
+              </div>
+            </div>
+            <div class="ticket-bottom">
+              <div class="ticket-holes"></div>
+              <p>Espaço Kids: <strong>R$ 15,00 / pessoa</strong></p>
+            </div>
+          </div>
+          <div class="info-ticket gold">
+            <div class="ticket-top">
+              <div class="ticket-holes"></div>
+              <h3>Funcionamento</h3>
+            </div>
+            <div class="ticket-body">
+              <div class="horario-item">
+                <span class="dia">Seg – Sex</span>
+                <span class="hora">16h às 00h</span>
+              </div>
+              <div class="horario-item">
+                <span class="dia">Sáb / Dom / Feriado</span>
+                <span class="hora">11h às 00h</span>
+              </div>
+            </div>
+            <div class="ticket-bottom">
+              <div class="ticket-holes"></div>
+              <p>Não cobramos entrada,<br/><strong>somente consumo</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-stripe-bottom"></div>
+  </section>
+
+  <!-- ════════════════════════════ CARDÁPIO ════════════════════════════════ -->
+  <section class="cardapio" id="cardapio">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="circus-badge">
+          <span>&#9733;</span>
+        </div>
+        <h2 class="section-title">Nosso <span>Cardápio</span></h2>
+        <p class="section-subtitle">Uma aventura de sabores para cada apetite</p>
+      </div>
+
+      <!-- TABS -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-tab="pizzas">
+          <span class="tab-icon">🍕</span> Pizzas
+        </button>
+        <button class="tab-btn" data-tab="petiscos">
+          <span class="tab-icon">🍢</span> Petiscos
+        </button>
+        <button class="tab-btn" data-tab="regionais">
+          <span class="tab-icon">🥩</span> Regionais
+        </button>
+        <button class="tab-btn" data-tab="gelatos">
+          <span class="tab-icon">🍦</span> Gelatos
+        </button>
+        <button class="tab-btn" data-tab="sobremesas">
+          <span class="tab-icon">🍰</span> Sobremesas
+        </button>
+        <button class="tab-btn" data-tab="cafeteria">
+          <span class="tab-icon">☕</span> Cafeteria
+        </button>
+        <button class="tab-btn" data-tab="bebidas">
+          <span class="tab-icon">🍹</span> Bebidas
+        </button>
+        <button class="tab-btn" data-tab="encomendas">
+          <span class="tab-icon">🎂</span> Encomendas
+        </button>
+      </div>
+
+      <!-- ─── PIZZAS ─── -->
+      <div class="tab-content active" id="tab-pizzas">
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Pizzas Grandes</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Milho</div><div class="item-desc">Mussarela, milho</div><div class="item-price">R$ 69,90</div></div>
+          <div class="menu-item"><div class="item-name">Americana</div><div class="item-desc">Mussarela, presunto</div><div class="item-price">R$ 69,90</div></div>
+          <div class="menu-item"><div class="item-name">Marguerita</div><div class="item-desc">Mussarela, tomate em rodelas, manjericão</div><div class="item-price">R$ 69,90</div></div>
+          <div class="menu-item"><div class="item-name">Frango</div><div class="item-desc">Mussarela, frango</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Frango com Cheddar</div><div class="item-desc">Mussarela, frango, cheddar</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Frango com Catupiry</div><div class="item-desc">Mussarela, frango, catupiry</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Atum</div><div class="item-desc">Mussarela, atum, cebola</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Bacon</div><div class="item-desc">Mussarela, bacon</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Baianinha</div><div class="item-desc">Mussarela, calabresa moída, pimenta calabresa</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Calabresa</div><div class="item-desc">Mussarela, calabresa fatiada, cebola</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Calabresa com Catupiry</div><div class="item-desc">Mussarela, calabresa fatiada, cebola, catupiry</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Quatro Queijos</div><div class="item-desc">Mussarela, catupiry, provolone, gorgonzola</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Portuguesa</div><div class="item-desc">Mussarela, presunto, ovo, tomate, pimentão, cebola</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Tomate Seco</div><div class="item-desc">Mussarela, tomate seco, rúcula</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item highlight"><div class="item-name">Caipira</div><div class="item-desc">Mussarela, frango, milho verde, ovo, bacon, catupiry</div><div class="item-price">R$ 74,90</div></div>
+          <div class="menu-item"><div class="item-name">Peperoni</div><div class="item-desc">Mussarela, pepperoni</div><div class="item-price">R$ 89,90</div></div>
+          <div class="menu-item"><div class="item-name">Royale</div><div class="item-desc">Mussarela, peito de peru, manjericão, catupiry, geleia de amora</div><div class="item-price">R$ 89,90</div></div>
+          <div class="menu-item"><div class="item-name">Fumeiro com Banana</div><div class="item-desc">Mussarela, fumeiro, banana da terra</div><div class="item-price">R$ 89,90</div></div>
+          <div class="menu-item"><div class="item-name">Carne Seca com Banana</div><div class="item-desc">Mussarela, carne seca, banana da terra, catupiry, cebola</div><div class="item-price">R$ 89,90</div></div>
+          <div class="menu-item highlight"><div class="item-name">Camarão</div><div class="item-desc">Mussarela, camarão</div><div class="item-price">R$ 99,90</div></div>
+          <div class="menu-item highlight"><div class="item-name">Camarão com Catupiry</div><div class="item-desc">Mussarela, camarão, catupiry</div><div class="item-price">R$ 99,90</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Pizzas Doces</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Tropical</div><div class="item-desc">Mussarela, abacaxi, canela, hortelã, leite condensado</div><div class="item-price">R$ 84,90</div></div>
+          <div class="menu-item"><div class="item-name">Banana</div><div class="item-desc">Mussarela, leite condensado, banana, canela</div><div class="item-price">R$ 84,90</div></div>
+          <div class="menu-item"><div class="item-name">Chocolate</div><div class="item-desc">Mussarela, chocolate</div><div class="item-price">R$ 84,90</div></div>
+          <div class="menu-item"><div class="item-name">Romeu e Julieta</div><div class="item-desc">Mussarela, goiabada</div><div class="item-price">R$ 84,90</div></div>
+        </div>
+
+        <div class="menu-note">
+          <strong>Adicionais:</strong> Borda Catupiry R$ 16,00 &nbsp;|&nbsp; Borda Pãozinho R$ 22,00<br/>
+          <small>Sabores da borda: Calabresa Moída · Calabresa com Catupiry · Frango · Frango com Catupiry</small>
+        </div>
+      </div>
+
+      <!-- ─── PETISCOS ─── -->
+      <div class="tab-content" id="tab-petiscos">
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Petiscos</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Queijo Coalho Grande</div><div class="item-price">R$ 31,90</div></div>
+          <div class="menu-item"><div class="item-name">Queijo Coalho c/ Tomate Seco</div><div class="item-price">R$ 41,90</div></div>
+          <div class="menu-item"><div class="item-name">Carne do Sol</div><div class="item-desc">Farofa + Salada</div><div class="item-price">R$ 62,90</div></div>
+          <div class="menu-item"><div class="item-name">Carne do Sol c/ Aipim Frito</div><div class="item-price">R$ 68,90</div></div>
+          <div class="menu-item"><div class="item-name">Carne do Sol c/ Batata Frita</div><div class="item-price">R$ 68,90</div></div>
+          <div class="menu-item"><div class="item-name">Filé ao Shoyu c/ Aipim Frito</div><div class="item-price">R$ 73,90</div></div>
+          <div class="menu-item"><div class="item-name">Filé ao Shoyu c/ Batata Frita</div><div class="item-price">R$ 73,90</div></div>
+          <div class="menu-item"><div class="item-name">Tripa Frita</div><div class="item-price">R$ 38,90</div></div>
+          <div class="menu-item"><div class="item-name">Batata Frita</div><div class="item-price">R$ 27,90</div></div>
+          <div class="menu-item"><div class="item-name">Aipim Frito</div><div class="item-price">R$ 27,90</div></div>
+          <div class="menu-item"><div class="item-name">Dadinho de Tapioca c/ Melaço</div><div class="item-desc">10 unidades</div><div class="item-price">R$ 39,90</div></div>
+          <div class="menu-item"><div class="item-name">Isca de Frango</div><div class="item-price">R$ 41,90</div></div>
+          <div class="menu-item"><div class="item-name">Isca de Peixe</div><div class="item-price">R$ 52,90</div></div>
+          <div class="menu-item highlight"><div class="item-name">Camarão Alho & Óleo</div><div class="item-price">R$ 57,90</div></div>
+          <div class="menu-item highlight"><div class="item-name">Camarão à Milanesa</div><div class="item-price">R$ 62,90</div></div>
+          <div class="menu-item highlight"><div class="item-name">Tábua de Camarão</div><div class="item-desc">Camarão empanado, alho & óleo e vinagrete</div><div class="item-price">R$ 141,90</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Salgados <small>(6 unidades)</small></h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Salgados Fritos</div><div class="item-desc">Coxinha, bolinho de queijo, bolinho de charque</div><div class="item-price">R$ 27,90</div></div>
+          <div class="menu-item"><div class="item-name">Croquete de Bacalhau</div><div class="item-price">R$ 28,90</div></div>
+          <div class="menu-item"><div class="item-name">Empanado de Camarão</div><div class="item-price">R$ 34,90</div></div>
+          <div class="menu-item"><div class="item-name">Bolinho de Feijoada</div><div class="item-price">R$ 27,90</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Pastéis</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Camarão</div><div class="item-price">R$ 15,90</div></div>
+          <div class="menu-item"><div class="item-name">Camarão com Catupiry</div><div class="item-price">R$ 15,90</div></div>
+          <div class="menu-item"><div class="item-name">Frango</div><div class="item-price">R$ 12,90</div></div>
+          <div class="menu-item"><div class="item-name">Frango com Catupiry</div><div class="item-price">R$ 12,90</div></div>
+          <div class="menu-item"><div class="item-name">Carne</div><div class="item-price">R$ 12,90</div></div>
+        </div>
+      </div>
+
+      <!-- ─── REGIONAIS ─── -->
+      <div class="tab-content" id="tab-regionais">
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Comidas Regionais</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid-double">
+          <div class="menu-item-double">
+            <div class="item-name">Feijoada</div>
+            <div class="item-desc">Arroz, salada</div>
+            <div class="prices-row"><span>Meia (1 pessoa): <strong>R$ 47,90</strong></span><span>Inteira (2 pessoas): <strong>R$ 81,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Maniçoba</div>
+            <div class="item-desc">Arroz, salada</div>
+            <div class="prices-row"><span>Meia: <strong>R$ 47,90</strong></span><span>Inteira: <strong>R$ 81,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Rabada</div>
+            <div class="item-desc">Arroz, salada e pirão</div>
+            <div class="prices-row"><span>Meia: <strong>R$ 52,90</strong></span><span>Inteira: <strong>R$ 83,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Sarapatel</div>
+            <div class="item-desc">Arroz, salada</div>
+            <div class="prices-row"><span>Meia: <strong>R$ 52,90</strong></span><span>Inteira: <strong>R$ 83,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Mocofato</div>
+            <div class="item-desc">Arroz, salada e pirão</div>
+            <div class="prices-row"><span>Meia: <strong>R$ 52,90</strong></span><span>Inteira: <strong>R$ 83,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Dobradinha</div>
+            <div class="item-desc">Arroz, salada</div>
+            <div class="prices-row"><span>Meia: <strong>R$ 52,90</strong></span><span>Inteira: <strong>R$ 83,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Galinha de Quintal</div>
+            <div class="item-desc">Arroz, salada e pirão</div>
+            <div class="prices-row"><span>2 pessoas: <strong>R$ 83,90</strong></span><span>4 pessoas: <strong>R$ 157,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Mininico</div>
+            <div class="item-desc">(unidade)</div>
+            <div class="prices-row"><span><strong>R$ 9,90</strong></span></div>
+          </div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Assados</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid-double">
+          <div class="menu-item-double">
+            <div class="item-name">Frango Filé (Inteiro)</div>
+            <div class="item-desc">Feijão tropeiro, arroz, salada, aipim frito e pirão de aipim – serve 4</div>
+            <div class="prices-row"><span><strong>R$ 115,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Frango Filé (Meio)</div>
+            <div class="item-desc">Feijão tropeiro, arroz, salada, aipim frito e pirão – serve 2</div>
+            <div class="prices-row"><span><strong>R$ 57,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Carne do Sol Assada (Inteira)</div>
+            <div class="item-desc">Serve 4 pessoas</div>
+            <div class="prices-row"><span><strong>R$ 167,90</strong></span></div>
+          </div>
+          <div class="menu-item-double highlight">
+            <div class="item-name">Picanha Bovina</div>
+            <div class="item-desc">Feijão tropeiro, arroz, salada e aipim frito – serve 2</div>
+            <div class="prices-row"><span><strong>R$ 156,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Carneiro Assado (Inteiro)</div>
+            <div class="item-desc">Feijão tropeiro, arroz, salada e aipim frito – serve 4</div>
+            <div class="prices-row"><span><strong>R$ 167,90</strong></span></div>
+          </div>
+          <div class="menu-item-double">
+            <div class="item-name">Cupim Bovino Assado (Inteiro)</div>
+            <div class="item-desc">Feijão tropeiro, arroz, salada e aipim frito – serve 4</div>
+            <div class="prices-row"><span><strong>R$ 167,90</strong></span></div>
+          </div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Caldos & Pirão</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Caldo de Feijão Preto</div><div class="item-price">R$ 16,90</div></div>
+          <div class="menu-item"><div class="item-name">Caldo de Aipim</div><div class="item-desc">Charque, fumeiro e calabresa</div><div class="item-price">R$ 16,90</div></div>
+          <div class="menu-item"><div class="item-name">Caldo de Sururu</div><div class="item-price">R$ 19,90</div></div>
+          <div class="menu-item"><div class="item-name">Caldo de Camarão</div><div class="item-price">R$ 19,90</div></div>
+          <div class="menu-item"><div class="item-name">Pirão de Aipim c/ Carne do Sol</div><div class="item-desc">Tam P / Tam G</div><div class="item-price">R$ 57,90 / R$ 94,90</div></div>
+          <div class="menu-item"><div class="item-name">Pirão de Aipim c/ Fumeiro</div><div class="item-desc">Tam P / Tam G</div><div class="item-price">R$ 57,90 / R$ 94,90</div></div>
+          <div class="menu-item"><div class="item-name">Tilápia</div><div class="item-desc">Farofa, arroz, salada – serve 2</div><div class="item-price">R$ 78,90</div></div>
+        </div>
+      </div>
+
+      <!-- ─── GELATOS ─── -->
+      <div class="tab-content" id="tab-gelatos">
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Gelatos</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Pequeno</div><div class="item-desc">80g – 1 sabor no copo</div><div class="item-price">R$ 18,00</div></div>
+          <div class="menu-item"><div class="item-name">Médio</div><div class="item-desc">140g – 2 sabores no copo</div><div class="item-price">R$ 20,00</div></div>
+          <div class="menu-item"><div class="item-name">Grande</div><div class="item-desc">210g – 3 sabores no copo</div><div class="item-price">R$ 25,00</div></div>
+          <div class="menu-item"><div class="item-name">Casquinha Decorada</div><div class="item-desc">Borda de ganache ao leite e granulado</div><div class="item-price">R$ 4,00</div></div>
+          <div class="menu-item"><div class="item-name">Casquinha Recheada</div><div class="item-desc">Brigadeiro / Nutella / Ninho / Doce de Leite</div><div class="item-price">R$ 6,00</div></div>
+          <div class="menu-item"><div class="item-name">Casquinha Decorada e Recheada</div><div class="item-price">R$ 10,00</div></div>
+          <div class="menu-item highlight"><div class="item-name">Petit Gateau</div><div class="item-desc">Bolo de chocolate, uma bola de gelato e calda de chocolate</div><div class="item-price">R$ 22,00</div></div>
+          <div class="menu-item highlight"><div class="item-name">Grand Gateau</div><div class="item-desc">Bolo de chocolate, uma bola de gelato, casquinha, calda de chocolate e farelo de amendoim</div><div class="item-price">R$ 29,70</div></div>
+          <div class="menu-item"><div class="item-name">Milkshake</div><div class="item-desc">Gelato e leite</div><div class="item-price">R$ 21,90</div></div>
+          <div class="menu-item"><div class="item-name">Taça Brownie</div><div class="item-desc">Duas bolas de gelato, bolo brownie e chantilly</div><div class="item-price">R$ 27,90</div></div>
+          <div class="menu-item highlight"><div class="item-name">Taça Uno Encantada</div><div class="item-desc">Revestida de brigadeiro, três bolas de gelato e chantilly</div><div class="item-price">R$ 31,00</div></div>
+          <div class="menu-item highlight"><div class="item-name">Taça Due da Magia</div><div class="item-desc">Revestida de brigadeiro, quatro bolas de gelato e chantilly</div><div class="item-price">R$ 37,90</div></div>
+          <div class="menu-item"><div class="item-name">Taça Dose Divina</div><div class="item-desc">Bolo, brigadeiro, dois sabores de gelato e morango</div><div class="item-price">R$ 27,50</div></div>
+          <div class="menu-item"><div class="item-name">Taça Sensação</div><div class="item-desc">Morango, dois sabores de gelato, chantilly, calda de chocolate</div><div class="item-price">R$ 27,50</div></div>
+          <div class="menu-item"><div class="item-name">Taça Tropical</div><div class="item-desc">Kiwi, manga, morango, dois sabores de gelato e chantilly</div><div class="item-price">R$ 27,50</div></div>
+          <div class="menu-item"><div class="item-name">Banana Split</div><div class="item-desc">Banana em rodelas, gelato e chantilly</div><div class="item-price">R$ 23,00</div></div>
+        </div>
+      </div>
+
+      <!-- ─── SOBREMESAS ─── -->
+      <div class="tab-content" id="tab-sobremesas">
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Sobremesas Chocolatudas</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item highlight"><div class="item-name">Grand Cake Brigadeiro</div><div class="item-desc">Bolinho de chocolate quente coberto com calda de ninho e brigadeiro, morangos picados e brigadeiro mole</div><div class="item-price">R$ 37,80</div></div>
+          <div class="menu-item"><div class="item-name">Sundae da Alegria</div><div class="item-desc">Nutella com oreo ou doce de leite com cookies, com porções de gelato da sua preferência</div><div class="item-price">R$ 27,60</div></div>
+          <div class="menu-item highlight"><div class="item-name">Grand Gelato</div><div class="item-desc">Cocada quentinha com três sabores de gelato, calda de brigadeiro e creme de ninho, finalizado com bombons Rafaello</div><div class="item-price">R$ 34,40</div></div>
+          <div class="menu-item"><div class="item-name">Gelato Brownie</div><div class="item-desc">Brownie de chocolate com calda de brigadeiro e um sabor de gelato, finalizado com leite em pó ninho e morangos</div><div class="item-price">R$ 28,70</div></div>
+          <div class="menu-item"><div class="item-name">Taça Churros</div><div class="item-desc">Doce de leite com três sabores de gelato, finalizado com churros</div><div class="item-price">R$ 31,40</div></div>
+          <div class="menu-item"><div class="item-name">Cestinha de Churros</div><div class="item-desc">Cestinha de churros com dois sabores de gelato, finalizado com Nutella e Kit Kat</div><div class="item-price">R$ 27,00</div></div>
+          <div class="menu-item"><div class="item-name">Combo Chocolate Quente e Churros</div><div class="item-desc">Chocolate quente com churros e calda extra de doce de leite</div><div class="item-price">R$ 27,90</div></div>
+          <div class="menu-item"><div class="item-name">Bola Mousse</div><div class="item-desc">Mousse de chocolate com recheio de ganache meio amargo, coberto de creme de Ninho, finalizado com morangos picados</div><div class="item-price">R$ 22,00</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Sobremesas da Doceria</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Docinho</div><div class="item-price">a partir de R$ 4,50</div></div>
+          <div class="menu-item"><div class="item-name">Bombom Sequilhos</div><div class="item-price">R$ 5,00</div></div>
+          <div class="menu-item"><div class="item-name">Luna de Morango</div><div class="item-desc">Casquinha amanteigada, chocolate branco, morango e brigadeiro branco</div><div class="item-price">R$ 20,00</div></div>
+          <div class="menu-item"><div class="item-name">Luna de Nutella</div><div class="item-desc">Casquinha amanteigada, chocolate meio amargo, nutella e brigadeiro</div><div class="item-price">R$ 20,00</div></div>
+          <div class="menu-item"><div class="item-name">Cheesecake</div><div class="item-desc">Base de biscoito sequilho com creme a base de cheese cremoso</div><div class="item-price">R$ 18,00</div></div>
+          <div class="menu-item"><div class="item-name">Brownie</div><div class="item-desc">Doce de leite ou brigadeiro</div><div class="item-price">R$ 18,00</div></div>
+          <div class="menu-item"><div class="item-name">Monoporção de Brigadeiro</div><div class="item-desc">Mini bolo de chocolate com recheio e cobertura de brigadeiro</div><div class="item-price">R$ 16,00</div></div>
+          <div class="menu-item"><div class="item-name">Cupcake</div><div class="item-desc">Bolinho recheado com brigadeiro branco ou chocolate</div><div class="item-price">R$ 10,00</div></div>
+          <div class="menu-item"><div class="item-name">Donuts</div><div class="item-desc">Chocolate Branco, Chocolate, Kit Kat, Kinder Bueno, Nutella c/ Morango, Ninho c/ Nutella, Ninho c/ Coco</div><div class="item-price">R$ 15,00</div></div>
+          <div class="menu-item highlight"><div class="item-name">Morangoffe Duo</div><div class="item-desc">Serve 2 pessoas – amendoim crocante, farofinha de cookies, morango, brigadeiro gourmet e gelato da escolha</div><div class="item-price">R$ 52,00</div></div>
+          <div class="menu-item highlight"><div class="item-name">Banoffe Duo</div><div class="item-desc">Serve 2 pessoas – crocante de amendoim, farofinha de cookies, banana, doce de leite e gelato</div><div class="item-price">R$ 52,00</div></div>
+          <div class="menu-item"><div class="item-name">Pudim de Leite</div><div class="item-price">R$ 11,90</div></div>
+          <div class="menu-item"><div class="item-name">Mousse de Maracujá</div><div class="item-price">R$ 11,90</div></div>
+          <div class="menu-item"><div class="item-name">Torta Alemã (fatia)</div><div class="item-desc">Creme de manteiga e açúcar, brigadeiro e biscoito</div><div class="item-price">R$ 18,00</div></div>
+          <div class="menu-item"><div class="item-name">Torta (fatia)</div><div class="item-desc">Consultar disponibilidade na vitrine</div><div class="item-price">a partir de R$ 24,00</div></div>
+        </div>
+      </div>
+
+      <!-- ─── CAFETERIA ─── -->
+      <div class="tab-content" id="tab-cafeteria">
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Cafeteria</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Café Expresso</div><div class="item-price">R$ 5,50</div></div>
+          <div class="menu-item"><div class="item-name">Café Expresso (Grande)</div><div class="item-price">R$ 11,00</div></div>
+          <div class="menu-item"><div class="item-name">Café Expresso com Leite</div><div class="item-price">R$ 6,50</div></div>
+          <div class="menu-item"><div class="item-name">Café Expresso com Leite (Grande)</div><div class="item-price">R$ 11,50</div></div>
+          <div class="menu-item"><div class="item-name">Café Latte</div><div class="item-price">R$ 10,00</div></div>
+          <div class="menu-item"><div class="item-name">Café Macchiato</div><div class="item-desc">Café com leite quente com espuma</div><div class="item-price">R$ 11,00</div></div>
+          <div class="menu-item"><div class="item-name">Café Bombom</div><div class="item-desc">Leite condensado, café e leite</div><div class="item-price">R$ 15,00</div></div>
+          <div class="menu-item"><div class="item-name">Café Coado V60</div><div class="item-price">R$ 15,00</div></div>
+          <div class="menu-item"><div class="item-name">Café com Doce de Leite</div><div class="item-price">R$ 15,00</div></div>
+          <div class="menu-item"><div class="item-name">Café na Prensa Francesa</div><div class="item-price">R$ 15,00</div></div>
+          <div class="menu-item"><div class="item-name">Cappuccino (Pequeno)</div><div class="item-desc">Leite, cacau em pó, café, açúcar e chantilly</div><div class="item-price">R$ 7,00</div></div>
+          <div class="menu-item"><div class="item-name">Cappuccino (Grande)</div><div class="item-price">R$ 13,00</div></div>
+          <div class="menu-item highlight"><div class="item-name">Café Affogato</div><div class="item-desc">Calda de chocolate, café, uma bola de gelato e chantilly</div><div class="item-price">R$ 19,00</div></div>
+          <div class="menu-item highlight"><div class="item-name">Café com Gelato</div><div class="item-desc">Gelato, café expresso, leite, chocolate e canela</div><div class="item-price">R$ 21,90</div></div>
+          <div class="menu-item"><div class="item-name">Frapê – Café Gelado</div><div class="item-desc">Leite, gelo, calda de chocolate, café expresso, 1 bola de gelato</div><div class="item-price">R$ 15,00</div></div>
+          <div class="menu-item"><div class="item-name">Chocolate Quente</div><div class="item-desc">Chocolate maltado com borda de ganache ao leite</div><div class="item-price">R$ 15,70</div></div>
+          <div class="menu-item highlight"><div class="item-name">Chocolate Quente com Gelato</div><div class="item-desc">Chocolate maltado com porção de gelato da sua escolha</div><div class="item-price">R$ 24,00</div></div>
+          <div class="menu-item"><div class="item-name">Combo Chocolate Quente e Churros</div><div class="item-desc">Chocolate quente com churros e calda extra de doce de leite</div><div class="item-price">R$ 27,90</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Salgados da Cafeteria</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Coxinha de Frango Catupiry</div><div class="item-price">R$ 13,00</div></div>
+          <div class="menu-item"><div class="item-name">Coxinha de Charque Catupiry</div><div class="item-price">R$ 15,00</div></div>
+          <div class="menu-item"><div class="item-name">Croquete de Camarão</div><div class="item-desc">Massa crocante recheado com camarão, catupiry OU gorgonzola</div><div class="item-price">R$ 13,00</div></div>
+          <div class="menu-item"><div class="item-name">Empanada</div><div class="item-desc">Massa leve com frango OU carne levemente apimentada</div><div class="item-price">a partir de R$ 12,00</div></div>
+          <div class="menu-item"><div class="item-name">Panni Recheado</div><div class="item-desc">Carne / Frango / Peito de Peru / Bacon c/ Provolone</div><div class="item-price">a partir de R$ 12,00</div></div>
+          <div class="menu-item"><div class="item-name">Quiche</div><div class="item-desc">Mini torta salgada: bacalhau / sertanejo / camarão / alho poró / frango / charque</div><div class="item-price">a partir de R$ 11,00</div></div>
+        </div>
+      </div>
+
+      <!-- ─── BEBIDAS ─── -->
+      <div class="tab-content" id="tab-bebidas">
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Drinks</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item highlight"><div class="item-name">Drink Encantado</div><div class="item-desc">Gelato com vodka</div><div class="item-price">R$ 25,00</div></div>
+          <div class="menu-item"><div class="item-name">Taça de Vinho</div><div class="item-desc">Suave ou seco tinto</div><div class="item-price">R$ 15,90</div></div>
+          <div class="menu-item"><div class="item-name">Moscow Mule</div><div class="item-desc">Vodka, sumo de limão, xarope de gengibre e chantilly</div><div class="item-price">R$ 29,90</div></div>
+          <div class="menu-item"><div class="item-name">Aperol Spritz</div><div class="item-desc">Aperol, espumante, água com gás ou soda, e laranja</div><div class="item-price">R$ 32,90</div></div>
+          <div class="menu-item"><div class="item-name">Mojito</div><div class="item-desc">Sumo de limão, bacardi, hortelã, soda ou água c/ gás</div><div class="item-price">R$ 19,90</div></div>
+          <div class="menu-item"><div class="item-name">Caipirinha</div><div class="item-desc">Pitú ou seleta</div><div class="item-price">R$ 23,90</div></div>
+          <div class="menu-item"><div class="item-name">Gin Importado</div><div class="item-desc">Monte seu gin</div><div class="item-price">R$ 27,90</div></div>
+          <div class="menu-item"><div class="item-name">Gin Nacional</div><div class="item-desc">Monte seu gin</div><div class="item-price">R$ 25,90</div></div>
+          <div class="menu-item"><div class="item-name">Dayquiri Frozen</div><div class="item-desc">Bacardi, leite moça, morango ou maracujá, ou umão</div><div class="item-price">R$ 29,90</div></div>
+          <div class="menu-item"><div class="item-name">Piña Colada</div><div class="item-desc">Leite moça, bacardi, leite de coco, abacaxi, chocolate em calda</div><div class="item-price">R$ 21,90</div></div>
+          <div class="menu-item"><div class="item-name">Coquetel de Frutas</div><div class="item-desc">Vodka Absolut</div><div class="item-price">R$ 25,90</div></div>
+          <div class="menu-item"><div class="item-name">Cuba Libre</div><div class="item-desc">Bacardi, limão e coca cola</div><div class="item-price">R$ 17,90</div></div>
+          <div class="menu-item"><div class="item-name">Sex on the Beach</div><div class="item-desc">Vodka, sumo de laranja, licor de pêssego, groselha, licor fino</div><div class="item-price">R$ 26,90</div></div>
+          <div class="menu-item"><div class="item-name">Marguerita</div><div class="item-desc">Sumo de limão, tequila, sal na borda, licor fino</div><div class="item-price">R$ 26,90</div></div>
+          <div class="menu-item"><div class="item-name">Soda Italiana</div><div class="item-desc">Água c/ gás, soda de pêssego ou maçã verde / tangerina / morango / limão siciliano</div><div class="item-price">R$ 23,90</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Cervejas</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Heineken 600ml</div><div class="item-price">R$ 18,90</div></div>
+          <div class="menu-item"><div class="item-name">Stella Artois 600ml</div><div class="item-price">R$ 16,90</div></div>
+          <div class="menu-item"><div class="item-name">Original 600ml</div><div class="item-price">R$ 15,90</div></div>
+          <div class="menu-item"><div class="item-name">Budweiser 600ml</div><div class="item-price">R$ 14,90</div></div>
+          <div class="menu-item"><div class="item-name">Brahma Duplo Malte 600ml</div><div class="item-price">R$ 14,90</div></div>
+          <div class="menu-item"><div class="item-name">Amstel 600ml</div><div class="item-price">R$ 14,90</div></div>
+          <div class="menu-item"><div class="item-name">Skol 600ml</div><div class="item-price">R$ 12,90</div></div>
+          <div class="menu-item"><div class="item-name">Spaten 600ml</div><div class="item-price">R$ 15,90</div></div>
+          <div class="menu-item"><div class="item-name">Long Neck Budweiser</div><div class="item-price">R$ 11,90</div></div>
+          <div class="menu-item"><div class="item-name">Long Neck Heineken</div><div class="item-price">R$ 13,90</div></div>
+          <div class="menu-item"><div class="item-name">Long Neck Corona</div><div class="item-price">R$ 13,90</div></div>
+          <div class="menu-item"><div class="item-name">Smirnoff Ice</div><div class="item-price">R$ 14,90</div></div>
+        </div>
+      </div>
+
+      <!-- ─── ENCOMENDAS ─── -->
+      <div class="tab-content" id="tab-encomendas">
+        <div class="menu-note" style="margin-bottom:2rem">
+          <strong>Encomendas pelo WhatsApp:</strong> (75) 99949-4445 &nbsp;|&nbsp; (75) 99992-5697
+        </div>
+
+        <div class="menu-category-header">
+          <div class="category-stripe"></div>
+          <h3>Tortas</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="encomendas-grid">
+          <div class="enc-card">
+            <div class="enc-size">P</div>
+            <div class="enc-info">Aro 15 · 8 a 10 fatias</div>
+            <div class="enc-price">R$ 150,00</div>
+          </div>
+          <div class="enc-card">
+            <div class="enc-size">M</div>
+            <div class="enc-info">Aro 20 · 20 a 25 fatias</div>
+            <div class="enc-price">R$ 220,00</div>
+          </div>
+          <div class="enc-card">
+            <div class="enc-size">G</div>
+            <div class="enc-info">Aro 25 · 30 a 35 fatias</div>
+            <div class="enc-price">R$ 320,00</div>
+          </div>
+        </div>
+        <div class="sabores-box">
+          <h4>Sabores disponíveis:</h4>
+          <div class="sabores-list">
+            <span>Chocolate</span><span>Casadinho</span><span>Prestígio</span>
+            <span>Baba de Moça</span><span>Sonho de Valsa</span><span>Ouro Branco</span>
+            <span>Abacaxi com Coco</span><span>Cocada com Ameixa</span><span>Ninho</span>
+            <span>Ninho com Nutella</span><span>Ninho com Abacaxi</span><span>Ninho com Maracujá</span>
+          </div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Chantininho</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="encomendas-grid">
+          <div class="enc-card gold">
+            <div class="enc-size">P</div>
+            <div class="enc-info">8 a 10 fatias</div>
+            <div class="enc-price">R$ 170,00</div>
+          </div>
+          <div class="enc-card gold">
+            <div class="enc-size">M</div>
+            <div class="enc-info">20 a 25 fatias</div>
+            <div class="enc-price">R$ 250,00</div>
+          </div>
+          <div class="enc-card gold">
+            <div class="enc-size">G</div>
+            <div class="enc-info">30 a 35 fatias</div>
+            <div class="enc-price">R$ 350,00</div>
+          </div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Tortas Salgadas</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Frango (Tam G)</div><div class="item-price">R$ 180,00</div></div>
+          <div class="menu-item"><div class="item-name">Camarão (Tam G)</div><div class="item-price">R$ 200,00</div></div>
+          <div class="menu-item"><div class="item-name">Charque (Tam G)</div><div class="item-price">R$ 200,00</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Quiches</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="item-name">Alho Poró com Tomate Seco (Tam G)</div><div class="item-price">R$ 140,00</div></div>
+          <div class="menu-item"><div class="item-name">Frango (Tam M)</div><div class="item-price">R$ 150,00</div></div>
+          <div class="menu-item"><div class="item-name">Camarão (Tam M)</div><div class="item-price">R$ 175,00</div></div>
+          <div class="menu-item"><div class="item-name">Charque (Tam M)</div><div class="item-price">R$ 175,00</div></div>
+        </div>
+
+        <div class="menu-category-header" style="margin-top:2.5rem">
+          <div class="category-stripe"></div>
+          <h3>Sobremesa no Potinho</h3>
+          <div class="category-stripe"></div>
+        </div>
+        <div class="sabores-box">
+          <h4>Sabores:</h4>
+          <div class="sabores-list">
+            <span>Casadinho c/ Morango</span><span>Sonho de Valsa</span><span>Ouro Branco</span>
+            <span>Casadinho de Brownie</span><span>Oreo com Ninho</span><span>Sensação</span>
+            <span>Ninho com Uva</span><span>Banoffee</span><span>Baba de Moça</span>
+            <span>Kit Kat</span><span>Ninho c/ Geleia de Morango</span>
+          </div>
+          <div class="enc-price" style="margin-top:1rem; text-align:center; font-size:1.4rem">R$ 150,00/kg</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EXPERIÊNCIA ══════════════════════════════ -->
+  <section class="experiencia" id="experiencia">
+    <div class="section-stripe-top red"></div>
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="circus-badge gold">
+          <span>&#9733;</span>
+        </div>
+        <h2 class="section-title white">A <span>Experiência</span> Encantada</h2>
+        <p class="section-subtitle white">Momentos mágicos para toda a família</p>
+      </div>
+
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-icon">🎠</div>
+          <h3>Espaço Kids</h3>
+          <p>Um parque de diversões dentro do restaurante! Nossas crianças brincam, se divertem e nunca ficam sozinhas. <strong>R$ 15,00 por pessoa.</strong></p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">🎪</div>
+          <h3>Ambiente Temático</h3>
+          <p>Decoração incrível com temática de circo, luzes, cores e detalhes que fazem de cada visita uma experiência visual única e inesquecível.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">🎂</div>
+          <h3>Celebrações</h3>
+          <p>O cenário perfeito para aniversários, confraternizações e datas especiais. Temos espaço privativo e cardápio completo para tornar seu evento especial.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">🍕</div>
+          <h3>Diversidade Gastronômica</h3>
+          <p>Pizzas artesanais, gelatos, drinks, comidas regionais baianas — mais de 100 opções no cardápio para satisfazer todos os paladares.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">🎡</div>
+          <h3>Para Toda a Família</h3>
+          <p>Desde o mais novo ao mais velho, o Cantinho Encantado tem algo especial para cada um. Um lugar onde memórias afetivas são criadas.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">⭐</div>
+          <h3>+53 mil Seguidores</h3>
+          <p>Somos um dos restaurantes mais queridos de Feira de Santana. Venha descobrir o que toda essa gente já sabe: aqui a magia é real!</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-stripe-bottom red"></div>
+  </section>
+
+  <!-- ═══════════════════════════ HORÁRIOS ═════════════════════════════════ -->
+  <section class="horarios" id="horarios">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="circus-badge">
+          <span>&#9733;</span>
+        </div>
+        <h2 class="section-title">Horários de <span>Funcionamento</span></h2>
+      </div>
+
+      <div class="horarios-wrap">
+        <div class="horarios-signboard">
+          <div class="signboard-top"></div>
+          <div class="signboard-body">
+            <div class="signboard-logo">
+              <svg viewBox="0 0 80 50" width="80" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="40,0 5,38 75,38" fill="#CC1016"/>
+                <polygon points="40,0 27,38 40,38" fill="rgba(255,255,255,0.3)"/>
+                <polygon points="40,0 53,38 66,38" fill="rgba(255,255,255,0.3)"/>
+                <ellipse cx="40" cy="0" rx="6" ry="8" fill="#C4953A"/>
+              </svg>
+            </div>
+            <h3>Abre todos os dias!</h3>
+            <div class="horario-row">
+              <div class="horario-day">
+                <div class="day-label">Segunda a Sexta</div>
+                <div class="day-time">16h <span>às</span> 00h</div>
+              </div>
+              <div class="horario-divider">✦</div>
+              <div class="horario-day">
+                <div class="day-label">Sábado, Domingo e Feriado</div>
+                <div class="day-time">11h <span>às</span> 00h</div>
+              </div>
+            </div>
+            <div class="horario-note">
+              Não cobramos entrada — somente consumo
+            </div>
+          </div>
+          <div class="signboard-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTATO ══════════════════════════════════ -->
+  <section class="contato" id="contato">
+    <div class="section-stripe-top"></div>
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="circus-badge gold">
+          <span>&#9733;</span>
+        </div>
+        <h2 class="section-title">Fale <span>Conosco</span></h2>
+        <p class="section-subtitle">Estamos prontos para encantar você</p>
+      </div>
+
+      <div class="contato-grid">
+        <div class="contato-card">
+          <div class="cc-icon">📞</div>
+          <h3>Telefone / WhatsApp</h3>
+          <a href="tel:+5575999925697">(75) 99992-5697</a>
+          <a href="tel:+5575999494445">(75) 99949-4445</a>
+          <a href="https://wa.me/5575999925697" target="_blank" class="btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+
+        <div class="contato-card">
+          <div class="cc-icon">📍</div>
+          <h3>Localização</h3>
+          <p>Feira de Santana, Bahia</p>
+          <a href="https://maps.app.goo.gl/7TpaHqYnESHnstTC9" target="_blank" class="btn-mapa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ver no Google Maps
+          </a>
+        </div>
+
+        <div class="contato-card">
+          <div class="cc-icon">📸</div>
+          <h3>Instagram</h3>
+          <p>@cantinhoencantadooo</p>
+          <p><small>53,7 mil seguidores</small></p>
+          <a href="https://www.instagram.com/cantinhoencantadooo" target="_blank" class="btn-instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Seguir no Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- Map embed placeholder -->
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124358.97453218614!2d-38.9680!3d-12.2664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71432b98c5fe411%3A0x22e6c28e0eb830b3!2sCantinho%20Encantado%20Pizzaria%20e%20Restaurante!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="350"
+          style="border:0;border-radius:12px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização Cantinho Encantado">
+        </iframe>
+      </div>
+    </div>
+    <div class="section-stripe-bottom"></div>
+  </section>
+
+  <!-- ════════════════════════════ FOOTER ══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-stripes"></div>
+    <div class="footer-inner container">
+      <div class="footer-logo">
+        <img src="Identidade visual/LOGO C. ENCANTADO.JPG.jpeg" alt="Cantinho Encantado" />
+      </div>
+      <div class="footer-info">
+        <p><strong>Cantinho Encantado Pizzaria e Restaurante</strong></p>
+        <p>Feira de Santana · Bahia</p>
+        <p>(75) 99992-5697 · @cantinhoencantadooo</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/cantinhoencantadooo" target="_blank" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/5575999925697" target="_blank" aria-label="WhatsApp">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2025 Cantinho Encantado · Pizzaria e Restaurante Temático · Feira de Santana – BA</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/5575999925697" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
