@@ -431,6 +431,110 @@ a { text-decoration: none; color: inherit; }
 }
 .section-subtitle.white { color: var(--gold-lt); }
 
+/* ══════════════════════ PREMIAÇÃO ══════════════════════ */
+.premiacao {
+  background: linear-gradient(135deg, var(--dark) 0%, #3a0a0a 60%, #1a0505 100%);
+  padding: 2.5rem 0;
+  overflow: hidden;
+}
+
+.premio-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, rgba(196,149,58,0.15) 0%, rgba(196,149,58,0.05) 100%);
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  position: relative;
+  box-shadow: 0 0 40px rgba(196,149,58,0.2), inset 0 0 60px rgba(196,149,58,0.04);
+}
+
+.premio-banner::before,
+.premio-banner::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 6px;
+  background: repeating-linear-gradient(180deg, var(--gold) 0, var(--gold) 8px, transparent 8px, transparent 16px);
+  opacity: 0.5;
+}
+.premio-banner::before { left: 12px; }
+.premio-banner::after  { right: 12px; }
+
+.premio-trophy {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1;
+  filter: drop-shadow(0 0 16px rgba(196,149,58,0.7));
+  flex-shrink: 0;
+  animation: trophy-glow 2.5s ease-in-out infinite alternate;
+}
+@keyframes trophy-glow {
+  from { filter: drop-shadow(0 0 10px rgba(196,149,58,0.5)); }
+  to   { filter: drop-shadow(0 0 24px rgba(196,149,58,1)); transform: scale(1.06); }
+}
+
+.premio-content {
+  flex: 1;
+}
+
+.premio-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.premio-titulo {
+  font-family: var(--font-circus);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.premio-categoria {
+  font-family: var(--font-display);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--gold-lt);
+  font-weight: 600;
+}
+
+.premio-estrelas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+.premio-estrelas span {
+  color: var(--gold);
+  font-size: 1.3rem;
+  line-height: 1;
+  animation: star-pulse 1.8s ease-in-out infinite alternate;
+}
+.premio-estrelas span:nth-child(2) { animation-delay: 0.3s; }
+.premio-estrelas span:nth-child(3) { animation-delay: 0.6s; }
+.premio-estrelas span:nth-child(4) { animation-delay: 0.9s; }
+.premio-estrelas span:nth-child(5) { animation-delay: 1.2s; }
+@keyframes star-pulse {
+  from { opacity: 0.4; transform: scale(0.9); }
+  to   { opacity: 1;   transform: scale(1.15); }
+}
+
+@media (max-width: 600px) {
+  .premio-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1.2rem;
+    gap: 1rem;
+  }
+  .premio-estrelas { flex-direction: row; justify-content: center; }
+  .premio-banner::before, .premio-banner::after { display: none; }
+}
+
 /* ══════════════════════ SOBRE ══════════════════════ */
 .sobre {
   background: var(--cream2);
