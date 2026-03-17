@@ -233,7 +233,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-subtitle {
   font-family: var(--font-display);
-  font-style: italic;
+
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   color: var(--cream);
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
@@ -400,7 +400,7 @@ a { text-decoration: none; color: inherit; }
 
 .section-subtitle {
   font-family: var(--font-display);
-  font-style: italic;
+
   font-size: 1.3rem;
   color: var(--gold);
   margin-top: 0.5rem;
@@ -955,7 +955,7 @@ a { text-decoration: none; color: inherit; }
 
 .signboard-body h3 {
   font-family: var(--font-display);
-  font-style: italic;
+
   font-size: 1.8rem;
   color: var(--red);
   margin-bottom: 1.5rem;
@@ -1008,7 +1008,7 @@ a { text-decoration: none; color: inherit; }
   padding: 0.8rem 1.2rem;
   font-size: 0.9rem;
   color: var(--text);
-  font-style: italic;
+
 }
 
 /* ══════════════════════ CONTATO ══════════════════════ */
