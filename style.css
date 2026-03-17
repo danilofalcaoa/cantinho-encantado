@@ -417,9 +417,11 @@ a { text-decoration: none; color: inherit; }
 
 .sobre-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   align-items: start;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .sobre-text p {
@@ -912,6 +914,19 @@ a { text-decoration: none; color: inherit; }
 .horarios-wrap {
   display: flex;
   justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.horarios-tickets {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.horarios-tickets .info-ticket {
+  flex: 1;
+  min-width: 240px;
+  max-width: 420px;
 }
 
 .horarios-signboard {
