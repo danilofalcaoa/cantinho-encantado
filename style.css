@@ -74,7 +74,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 90px;
 }
 
 .nav-logo img {
@@ -346,7 +346,7 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: nowrap;
   overflow: hidden;
 }
-.marquee-lights.top { top: 72px; }
+.marquee-lights.top { top: 90px; }
 .marquee-lights.bottom { bottom: 0; }
 
 .marquee-lights span {
@@ -1388,7 +1388,7 @@ a { text-decoration: none; color: inherit; }
 
   .nav-links {
     position: fixed;
-    top: 72px; left: 0; right: 0;
+    top: 90px; left: 0; right: 0;
     background: rgba(45,10,10,0.98);
     backdrop-filter: blur(8px);
     flex-direction: column;
