@@ -156,10 +156,15 @@ window.addEventListener('mousemove', e => {
     return v === 1 ? w : (w - GAP * (v - 1)) / v;
   }
 
-  /* Aplica a largura calculada a todos os slides */
+  /* Aplica largura E altura explícitas — height necessária porque
+     aspect-ratio em flex children tem bug no iOS Safari */
   function applyWidths() {
     const sw = slideWidth();
-    slides.forEach(s => { s.style.width = sw + 'px'; });
+    const sh = Math.round(sw * 3 / 4);
+    slides.forEach(s => {
+      s.style.width  = sw + 'px';
+      s.style.height = sh + 'px';
+    });
   }
 
   /* Reconstrói os dots de acordo com o número de posições */
