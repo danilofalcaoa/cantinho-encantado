@@ -136,41 +136,85 @@ window.addEventListener('mousemove', e => {
   const dotsWrap = document.getElementById('ambienteDots');
   if (!track) return;
 
-  const slides = track.querySelectorAll('.carousel-slide');
+  const wrap   = track.closest('.carousel-track-wrap');
+  const slides = Array.from(track.querySelectorAll('.carousel-slide'));
   const total  = slides.length;
+  const GAP    = 6; // px — deve bater com o gap do CSS
   let current  = 0;
   let autoTimer;
 
-  // Gera os dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Slide ${i + 1}`);
-    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
-    dotsWrap.appendChild(dot);
-  });
+  /* Quantos slides ficam visíveis ao mesmo tempo */
+  function visible() { return window.innerWidth >= 768 ? 3 : 1; }
+
+  /* Índice máximo que current pode alcançar */
+  function maxIdx() { return Math.max(0, total - visible()); }
+
+  /* Largura de um slide baseada no container real */
+  function slideWidth() {
+    const v   = visible();
+    const w   = wrap.offsetWidth;
+    return v === 1 ? w : (w - GAP * (v - 1)) / v;
+  }
+
+  /* Aplica a largura calculada a todos os slides */
+  function applyWidths() {
+    const sw = slideWidth();
+    slides.forEach(s => { s.style.width = sw + 'px'; });
+  }
+
+  /* Reconstrói os dots de acordo com o número de posições */
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    const count = maxIdx() + 1;
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Posição ${i + 1}`);
+      dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+      dotsWrap.appendChild(dot);
+    }
+  }
 
   function goTo(idx) {
-    current = (idx + total) % total;
-    track.style.transform = `translateX(-${current * 100}%)`;
+    current = Math.max(0, Math.min(idx, maxIdx()));
+    const step = slideWidth() + GAP;
+    track.style.transform = `translateX(-${current * step}px)`;
     dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) =>
       d.classList.toggle('active', i === current)
     );
   }
 
-  prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-  nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+  function next() { goTo(current >= maxIdx() ? 0 : current + 1); }
+  function prev() { goTo(current <= 0 ? maxIdx() : current - 1); }
 
-  function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 4500); }
+  prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+  nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+
+  function startAuto() { autoTimer = setInterval(next, 4500); }
   function resetAuto()  { clearInterval(autoTimer); startAuto(); }
+
+  /* Inicializa e reage ao resize */
+  function init() {
+    applyWidths();
+    buildDots();
+    goTo(Math.min(current, maxIdx()));
+  }
+
+  init();
   startAuto();
 
-  // Suporte a swipe mobile
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(init, 120);
+  });
+
+  /* Swipe mobile */
   let startX = 0;
   track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend',   e => {
+  track.addEventListener('touchend', e => {
     const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
+    if (Math.abs(diff) > 40) { diff > 0 ? next() : prev(); resetAuto(); }
   });
 })();
 

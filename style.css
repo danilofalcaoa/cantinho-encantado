@@ -168,8 +168,27 @@ a { text-decoration: none; color: inherit; }
   .hero { background-image: url('Banner da primeira dobra/Prancheta 17.png'); }
 }
 
+/* Overlay de contraste para o texto */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08) 0%,
+    rgba(0,0,0,0.52) 45%,
+    rgba(0,0,0,0.68) 72%,
+    rgba(0,0,0,0.25) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* Stripes overlay — oculto pois o banner já tem design próprio */
 .hero-stripes { display: none; }
+
+/* Tenda SVG — ocultada pois o banner já mostra o ambiente */
+.tent-wrap { display: none; }
 
 .hero-content {
   position: relative;
@@ -230,9 +249,9 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 4.5vw, 2.6rem);
   font-weight: 700;
-  color: var(--white);
-  text-shadow: 0 3px 12px rgba(0,0,0,0.7);
-  max-width: 600px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8);
+  max-width: 640px;
   line-height: 1.3;
   animation: fadeInUp 1.2s ease both;
 }
@@ -243,7 +262,8 @@ a { text-decoration: none; color: inherit; }
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold-lt);
+  color: #ffe680;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
   animation: fadeInUp 1.4s ease both;
 }
 
@@ -851,9 +871,8 @@ a { text-decoration: none; color: inherit; }
 /* ══════════════════════ CARROSSEL AMBIENTE ══════════════════════ */
 .ambiente-carousel {
   position: relative;
-  max-width: 900px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 3.5rem;
 }
 
 .carousel-track-wrap {
@@ -865,13 +884,16 @@ a { text-decoration: none; color: inherit; }
 
 .carousel-track {
   display: flex;
+  gap: 6px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 
+/* Largura calculada via JS — padrão mobile (1 visível) */
 .carousel-slide {
-  min-width: 100%;
+  flex: 0 0 auto;
   aspect-ratio: 4 / 3;
-  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .carousel-slide img {
@@ -928,7 +950,7 @@ a { text-decoration: none; color: inherit; }
   transform: scale(1.35);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ambiente-carousel { padding: 0 2.5rem; }
   .carousel-btn { font-size: 1.5rem; width: 38px; height: 38px; }
 }
